@@ -16,6 +16,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 @RequiredArgsConstructor
 public class ApplicationConfig {
+
     private  final UserRepository userRepository;
     @Bean
     public AuthenticationManager authenticationManager (AuthenticationConfiguration config) throws  Exception
@@ -28,17 +29,17 @@ public class ApplicationConfig {
         DaoAuthenticationProvider authenticationProvider=new DaoAuthenticationProvider();
         authenticationProvider.setUserDetailsService(userDetailService());
         authenticationProvider.setPasswordEncoder(passwordEncoder());
-        return authenticationProvider();
+        return authenticationProvider;
     }
 
     //cambio que hice  de private  a protected
     //-----------------------------------------
     @Bean
-    protected PasswordEncoder passwordEncoder() {
+    public PasswordEncoder passwordEncoder() {
         return  new BCryptPasswordEncoder();
     }
     @Bean
-    protected UserDetailsService userDetailService() {
+    public UserDetailsService userDetailService() {
         return username -> userRepository.findByUsername(username)
                 .orElseThrow(()->new UsernameNotFoundException("User not found"));
     }
