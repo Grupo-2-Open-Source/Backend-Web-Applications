@@ -1,4 +1,4 @@
-package com.example.backendwebapplications.autoya.Demo;
+package com.example.backendwebapplications.autoya.LoginRegister.Demo;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;

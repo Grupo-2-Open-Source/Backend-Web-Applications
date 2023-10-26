@@ -1,5 +1,6 @@
-package com.example.backendwebapplications.autoya.Auth;
+package com.example.backendwebapplications.autoya.LoginRegister.Auth;
 
+import com.example.backendwebapplications.autoya.LoginRegister.User.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,4 +16,5 @@ public class RegisterRequest {
     String firstname;
     String lastname;
     String country;
+    Role role;
 }

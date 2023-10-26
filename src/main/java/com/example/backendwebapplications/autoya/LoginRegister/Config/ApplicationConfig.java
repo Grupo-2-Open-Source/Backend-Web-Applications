@@ -1,6 +1,6 @@
-package com.example.backendwebapplications.autoya.Config;
+package com.example.backendwebapplications.autoya.LoginRegister.Config;
 
-import com.example.backendwebapplications.shared.domain.model.entities.User.UserRepository;
+import com.example.backendwebapplications.shared.User.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
