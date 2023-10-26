@@ -1,4 +1,4 @@
-package com.example.backendwebapplications.autoya.Auth;
+package com.example.backendwebapplications.autoya.LoginRegister.Auth;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.example.backendwebapplications.autoya.User;
+package com.example.backendwebapplications.autoya.LoginRegister.User;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

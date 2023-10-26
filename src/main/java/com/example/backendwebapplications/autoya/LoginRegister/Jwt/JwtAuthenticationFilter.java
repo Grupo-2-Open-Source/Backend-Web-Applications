@@ -1,4 +1,4 @@
-package com.example.backendwebapplications.autoya.Jwt;
+package com.example.backendwebapplications.autoya.LoginRegister.Jwt;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

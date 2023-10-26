@@ -1,9 +1,9 @@
-package com.example.backendwebapplications.autoya.Auth;
+package com.example.backendwebapplications.autoya.LoginRegister.Auth;
 
-import com.example.backendwebapplications.autoya.Jwt.JwtService;
-import com.example.backendwebapplications.autoya.User.Role;
-import com.example.backendwebapplications.autoya.User.User;
-import com.example.backendwebapplications.shared.domain.model.entities.User.UserRepository;
+import com.example.backendwebapplications.autoya.LoginRegister.Jwt.JwtService;
+import com.example.backendwebapplications.autoya.LoginRegister.User.Role;
+import com.example.backendwebapplications.autoya.LoginRegister.User.User;
+import com.example.backendwebapplications.shared.User.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -33,7 +33,8 @@ public class AuthService {
                 .firstname(request.getFirstname())
                 .lastname(request.lastname)
                 .country(request.getCountry())
-                .role(Role.USER)
+                .role(request.getRole())
+//                .role(Role.USER)
                 .build();
         userRepository.save(user);
         return AuthResponse.builder()
