@@ -1,5 +1,6 @@
 package com.example.backendwebapplications.autoya.LoginRegister.User;
 
+import com.example.backendwebapplications.profile.domain.model.valueobjects.PhoneNumber;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,6 +11,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -26,6 +28,11 @@ public class User  implements UserDetails {
     String username;
     String password;
     String firstname;
+    Date date;
+
+    @Embedded
+    public PhoneNumber phoneNumber;
+
     String lastname;
     String country;
     @Enumerated(EnumType.STRING)
