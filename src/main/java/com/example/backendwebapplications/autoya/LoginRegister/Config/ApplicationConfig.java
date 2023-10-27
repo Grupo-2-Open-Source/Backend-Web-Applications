@@ -32,7 +32,7 @@ public class ApplicationConfig {
         return authenticationProvider;
     }
 
-    //cambio que hice  de private  a protected
+
     //-----------------------------------------
     @Bean
     public PasswordEncoder passwordEncoder() {
