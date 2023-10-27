@@ -20,7 +20,7 @@ public class RegisterRequest {
     String password;
     String firstname;
     Date date;
-    
+
     @Embedded
     public PhoneNumber phoneNumber;
     String lastname;
