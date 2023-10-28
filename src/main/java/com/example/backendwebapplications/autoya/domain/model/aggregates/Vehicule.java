@@ -3,14 +3,19 @@ package com.example.backendwebapplications.autoya.domain.model.aggregates;
 import com.example.backendwebapplications.autoya.domain.model.valueobjects.CarClass;
 import com.example.backendwebapplications.autoya.domain.model.valueobjects.CarTransmission;
 import com.example.backendwebapplications.autoya.domain.model.valueobjects.ListVehicules;
+import com.example.backendwebapplications.shared.domain.model.entities.AuditableModel;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
-public class Vehicule {
+public class Vehicule extends AuditableModel {
 
     @Id
     private Long id;
@@ -31,7 +36,15 @@ public class Vehicule {
 
     private CarTransmission carTransmission;
 
+    private  Vehicule vehicule;
+
     @Embedded
     private ListVehicules listVehicules;
+
+    public Vehicule(Vehicule vehicule){
+        this.vehicule=  vehicule;
+}
+
+
 
 }
