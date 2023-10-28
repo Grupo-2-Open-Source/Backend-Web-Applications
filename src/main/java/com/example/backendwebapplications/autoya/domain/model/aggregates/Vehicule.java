@@ -2,6 +2,8 @@ package com.example.backendwebapplications.autoya.domain.model.aggregates;
 
 import com.example.backendwebapplications.autoya.domain.model.valueobjects.CarClass;
 import com.example.backendwebapplications.autoya.domain.model.valueobjects.CarTransmission;
+import com.example.backendwebapplications.autoya.domain.model.valueobjects.ListVehicules;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Getter;
@@ -28,4 +30,8 @@ public class Vehicule {
     private CarClass carClass;
 
     private CarTransmission carTransmission;
+
+    @Embedded
+    private ListVehicules listVehicules;
+
 }

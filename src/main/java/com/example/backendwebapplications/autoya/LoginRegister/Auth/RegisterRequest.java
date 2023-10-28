@@ -1,29 +1,35 @@
 package com.example.backendwebapplications.autoya.LoginRegister.Auth;
 
 import com.example.backendwebapplications.autoya.LoginRegister.User.Role;
-import com.example.backendwebapplications.profile.domain.model.valueobjects.PhoneNumber;
+import com.example.backendwebapplications.profile.domain.model.valueobjects.*;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.Date;
 
 @Data
 @Builder
+
 @AllArgsConstructor
 @NoArgsConstructor
 public class RegisterRequest {
+
     String username;
     String password;
-    String firstname;
-    Date date;
+
+
+    @Embedded
+    public BirthDate birthDate;
+//    Long phonenumber;
 
     @Embedded
     public PhoneNumber phoneNumber;
-    String lastname;
+    @Embedded
+    public FirstName firstName;
+    @Embedded
+    public LastName lastName;
+
     String country;
 
     Role role;

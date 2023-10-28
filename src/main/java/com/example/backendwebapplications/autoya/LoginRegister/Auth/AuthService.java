@@ -30,17 +30,20 @@ public class AuthService {
         User user=User.builder()
                 .username(request.getUsername())
                 .password(passwordEncoder.encode(request.getPassword()))
-                .firstname(request.getFirstname())
-                .date(request.getDate())
+                .firstName(request.getFirstName())
+
+                .birthDate(request.getBirthDate())
 
                 .phoneNumber(request.getPhoneNumber())
-//                .phone(request.getPhone())
-                .lastname(request.getLastname())
+
+//                .phonenumber(request.getPhonenumber())  no recors¡d
+                .lastName(request.getLastName())
                 .country(request.getCountry())
                 .role(request.getRole())
 //                .role(Role.USERTENANT)
                 .build();
         userRepository.save(user);
+
         return AuthResponse.builder()
                 .token(jwtService.getToken(user))
                 .build();

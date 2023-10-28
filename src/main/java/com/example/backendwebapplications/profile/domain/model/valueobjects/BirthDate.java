@@ -6,7 +6,7 @@ import java.util.Date;
 
 @Embeddable
 public record BirthDate(
- Date birthDate){
+ String birthDate){
     public BirthDate(){
         this(null);
 

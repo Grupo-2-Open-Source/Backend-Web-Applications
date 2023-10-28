@@ -1,6 +1,6 @@
 package com.example.backendwebapplications.autoya.LoginRegister.User;
 
-import com.example.backendwebapplications.profile.domain.model.valueobjects.PhoneNumber;
+import com.example.backendwebapplications.profile.domain.model.valueobjects.*;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -24,17 +24,29 @@ public class User  implements UserDetails {
     @Id
     @GeneratedValue
     Integer id;
+
     @Column(nullable = false)
-    String username;
+
+   String username;
+
     String password;
-    String firstname;
-    Date date;
+
+    @Embedded
+    public LastName lastName;
+    @Embedded
+    public FirstName firstName;
+
+    @Embedded
+    public BirthDate birthDate;
+//    Long phonenumber;
 
     @Embedded
     public PhoneNumber phoneNumber;
 
-    String lastname;
+
     String country;
+
+
     @Enumerated(EnumType.STRING)
     Role role;
 

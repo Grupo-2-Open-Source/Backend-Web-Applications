@@ -7,12 +7,12 @@ import jakarta.validation.constraints.Email;
 public record PhoneNumber(
  Long phoneNumber){
     public PhoneNumber(){
-        this(null);
-
+        this(0L);
     }
     public PhoneNumber{
         if (phoneNumber == null ){
             throw new IllegalArgumentException("Phone Number cannot be null");
         }
+
     }
 }
