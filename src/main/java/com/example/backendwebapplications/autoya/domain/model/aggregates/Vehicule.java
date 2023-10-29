@@ -36,14 +36,10 @@ public class Vehicule extends AuditableModel {
 
     private CarTransmission carTransmission;
 
-    private  Vehicule vehicule;
 
     @Embedded
     private ListVehicules listVehicules;
 
-    public Vehicule(Vehicule vehicule){
-        this.vehicule=  vehicule;
-}
 
 
 

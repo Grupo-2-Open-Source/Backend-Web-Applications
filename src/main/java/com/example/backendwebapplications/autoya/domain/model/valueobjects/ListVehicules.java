@@ -19,7 +19,7 @@ public class ListVehicules {
     }
 
     public void addItem(Vehicule vehicule) {
-        Vehicule vehicule1 = new Vehicule(vehicule);
-        Vehicules.add(vehicule1);
+//        Vehicule vehicule1 = new Vehicule();
+        Vehicules.add(vehicule);
     }
 }
