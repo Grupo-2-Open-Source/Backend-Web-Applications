@@ -30,16 +30,11 @@ public class AuthService {
                 .username(request.getUsername())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .firstName(request.getFirstName())
-
                 .birthDate(request.getBirthDate())
-
                 .phoneNumber(request.getPhoneNumber())
-
-//                .phonenumber(request.getPhonenumber())  no recors¡d
                 .lastName(request.getLastName())
                 .country(request.getCountry())
                 .role(request.getRole())
-//                .role(Role.USERTENANT)
                 .build();
         userRepository.save(user);
 

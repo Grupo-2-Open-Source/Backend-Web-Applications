@@ -18,7 +18,6 @@ public class RegisterRequest {
 
     @Embedded
     public BirthDate birthDate;
-//    Long phonenumber;
 
     @Embedded
     public PhoneNumber phoneNumber;

@@ -35,12 +35,7 @@ public class Vehicule extends AuditableModel {
     private CarClass carClass;
 
     private CarTransmission carTransmission;
-
-
     @Embedded
     private ListVehicules listVehicules;
-
-
-
 
 }
