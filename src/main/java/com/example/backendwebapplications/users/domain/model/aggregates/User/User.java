@@ -1,4 +1,4 @@
-package com.example.backendwebapplications.autoya.LoginRegister.User;
+package com.example.backendwebapplications.users.domain.model.aggregates.User;
 
 import com.example.backendwebapplications.profile.domain.model.valueobjects.*;
 import jakarta.persistence.*;
@@ -11,7 +11,6 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 
 @Data

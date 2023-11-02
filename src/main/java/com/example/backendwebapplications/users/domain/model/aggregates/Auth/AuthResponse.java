@@ -1,4 +1,4 @@
-package com.example.backendwebapplications.autoya.LoginRegister.Auth;
+package com.example.backendwebapplications.users.domain.model.aggregates.Auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class LoginRequest {
-    String username;
-    String password;
+public class AuthResponse {
+    String token;
 }

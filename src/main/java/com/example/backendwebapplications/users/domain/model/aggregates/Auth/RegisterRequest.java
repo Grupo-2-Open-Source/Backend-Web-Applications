@@ -1,12 +1,9 @@
-package com.example.backendwebapplications.autoya.LoginRegister.Auth;
+package com.example.backendwebapplications.users.domain.model.aggregates.Auth;
 
-import com.example.backendwebapplications.autoya.LoginRegister.User.Role;
+import com.example.backendwebapplications.users.domain.model.aggregates.User.Role;
 import com.example.backendwebapplications.profile.domain.model.valueobjects.*;
 import jakarta.persistence.Embedded;
-import jakarta.persistence.Entity;
 import lombok.*;
-
-import java.util.Date;
 
 @Data
 @Builder
