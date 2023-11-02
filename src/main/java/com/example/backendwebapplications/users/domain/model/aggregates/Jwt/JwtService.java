@@ -1,4 +1,4 @@
-package com.example.backendwebapplications.autoya.LoginRegister.Jwt;
+package com.example.backendwebapplications.users.domain.model.aggregates.Jwt;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

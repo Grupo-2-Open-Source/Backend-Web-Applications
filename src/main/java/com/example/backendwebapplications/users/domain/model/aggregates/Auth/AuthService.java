@@ -1,8 +1,7 @@
-package com.example.backendwebapplications.autoya.LoginRegister.Auth;
+package com.example.backendwebapplications.users.domain.model.aggregates.Auth;
 
-import com.example.backendwebapplications.autoya.LoginRegister.Jwt.JwtService;
-import com.example.backendwebapplications.autoya.LoginRegister.User.Role;
-import com.example.backendwebapplications.autoya.LoginRegister.User.User;
+import com.example.backendwebapplications.users.domain.model.aggregates.Jwt.JwtService;
+import com.example.backendwebapplications.users.domain.model.aggregates.User.User;
 import com.example.backendwebapplications.shared.User.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -31,16 +30,11 @@ public class AuthService {
                 .username(request.getUsername())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .firstName(request.getFirstName())
-
                 .birthDate(request.getBirthDate())
-
                 .phoneNumber(request.getPhoneNumber())
-
-//                .phonenumber(request.getPhonenumber())  no recors¡d
                 .lastName(request.getLastName())
                 .country(request.getCountry())
                 .role(request.getRole())
-//                .role(Role.USERTENANT)
                 .build();
         userRepository.save(user);
 

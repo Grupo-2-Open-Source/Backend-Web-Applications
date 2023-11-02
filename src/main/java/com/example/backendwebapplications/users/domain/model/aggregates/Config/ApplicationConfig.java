@@ -1,4 +1,4 @@
-package com.example.backendwebapplications.autoya.LoginRegister.Config;
+package com.example.backendwebapplications.users.domain.model.aggregates.Config;
 
 import com.example.backendwebapplications.shared.User.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -32,8 +32,6 @@ public class ApplicationConfig {
         return authenticationProvider;
     }
 
-
-    //-----------------------------------------
     @Bean
     public PasswordEncoder passwordEncoder() {
         return  new BCryptPasswordEncoder();

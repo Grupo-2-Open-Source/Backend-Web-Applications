@@ -1,6 +1,6 @@
-package com.example.backendwebapplications.autoya.LoginRegister.Config;
+package com.example.backendwebapplications.users.domain.model.aggregates.Config;
 
-import com.example.backendwebapplications.autoya.LoginRegister.Jwt.JwtAuthenticationFilter;
+import com.example.backendwebapplications.users.domain.model.aggregates.Jwt.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
