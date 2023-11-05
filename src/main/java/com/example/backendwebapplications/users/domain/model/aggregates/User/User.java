@@ -34,7 +34,6 @@ public class User  implements UserDetails {
     public LastName lastName;
     @Embedded
     public FirstName firstName;
-
     @Embedded
     public BirthDate birthDate;
 //    Long phonenumber;

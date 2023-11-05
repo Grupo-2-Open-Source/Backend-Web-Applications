@@ -1,6 +1,6 @@
 package com.example.backendwebapplications.autoya.domain.model.valueobjects;
 
-import com.example.backendwebapplications.autoya.domain.model.aggregates.Vehicule;
+import com.example.backendwebapplications.autoya.domain.model.entities.Vehicule;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.OneToMany;
 
