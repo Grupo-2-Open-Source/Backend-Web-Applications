@@ -2,23 +2,27 @@ package com.example.backendwebapplications.autoya.domain.model.aggregates;
 
 import com.example.backendwebapplications.autoya.domain.model.entities.Owner;
 import com.example.backendwebapplications.autoya.domain.model.entities.Tenant;
+import com.example.backendwebapplications.autoya.domain.model.entities.Vehicule;
 import jakarta.persistence.*;
 import org.springframework.data.domain.AbstractAggregateRoot;
 
 @Entity
-public class Notification extends AbstractAggregateRoot<Notification>  {
+public class Rent extends AbstractAggregateRoot<Rent>  { //process
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
-    private Long id;
+    private Long Id;
 
-    private String tenantName;
-
-    private String brand;
-
-    private String model;
+    private String rentContract;
 
     @ManyToOne
-    @JoinColumn(name="owner_Id")
+    @JoinColumn(name ="owner_id")
     private Owner owner;
 
+    @ManyToOne
+    @JoinColumn(name="tenant_Id")
+    private Tenant tenant;
+
+    @OneToOne
+    @JoinColumn(name="vehicule_Id")
+    private Vehicule vehicule;
 }
