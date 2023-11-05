@@ -1,5 +1,6 @@
 package com.example.backendwebapplications.autoya.domain.model.aggregates;
 
+import com.example.backendwebapplications.users.domain.model.aggregates.User.User;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -11,8 +12,8 @@ public class Notification {
     private Long id;
     private String body;
 
-//    @ManyToOne
-//    @JoinColumn(name = "user_id")
-//    private User user;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
 }
