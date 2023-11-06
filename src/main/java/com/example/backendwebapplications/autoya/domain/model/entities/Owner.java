@@ -36,5 +36,5 @@ public class Owner {
 
     @OneToMany
     @JoinColumn(name = "vehicule_id")
-    private List<Vehicule> ownedVehicles;
+    private List<Vehicle> ownedVehicles;
 }

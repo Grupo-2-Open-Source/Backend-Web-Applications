@@ -38,5 +38,5 @@ public class Tenant {
 
     @OneToMany
     @JoinColumn(name="vehicule_id")
-    private List<Vehicule> rentedVehicles;
+    private List<Vehicle> rentedVehicles;
 }
