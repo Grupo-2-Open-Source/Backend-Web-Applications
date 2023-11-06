@@ -13,14 +13,14 @@ import java.util.Optional;
 
 public class RentCommandServiceImpl implements RentCommandService {
 
-    private final OwnerRepository ownerRepository;
-    private final TenantRepository tenantRepository;
+    /*private final OwnerRepository ownerRepository;
+    private final TenantRepository tenantRepository;*/
     private final VehicleRepository vehicleRepository;
     private final RentRepository rentRepository;
 
-    public RentCommandServiceImpl(OwnerRepository ownerRepository, TenantRepository tenantRepository, VehicleRepository vehicleRepository, RentRepository rentRepository) {
-        this.ownerRepository = ownerRepository;
-        this.tenantRepository = tenantRepository;
+    public RentCommandServiceImpl(VehicleRepository vehicleRepository, RentRepository rentRepository) {
+        /*this.ownerRepository = ownerRepository;
+        this.tenantRepository = tenantRepository;*/
         this.vehicleRepository = vehicleRepository;
         this.rentRepository = rentRepository;
     }
@@ -54,6 +54,7 @@ public class RentCommandServiceImpl implements RentCommandService {
             rentRepository.findById(command.rentId()).map(rent -> {
                 rent.confirm();
                 rent.getVehicule().setRented(true);
+                rent.getTenant().addVehicle(rent.getVehicule());
                 rentRepository.save(rent);
                 return rent.getId();
             }).orElseThrow(() -> new RuntimeException("Rent not found"));

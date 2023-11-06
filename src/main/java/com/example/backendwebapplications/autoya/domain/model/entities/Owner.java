@@ -6,11 +6,13 @@ import com.example.backendwebapplications.profile.domain.model.valueobjects.Last
 import com.example.backendwebapplications.profile.domain.model.valueobjects.PhoneNumber;
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
 @Entity
 @Getter
+@Setter
 public class Owner {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
@@ -37,4 +39,8 @@ public class Owner {
     @OneToMany
     @JoinColumn(name = "vehicule_id")
     private List<Vehicle> ownedVehicles;
+
+    public void addVehicle(Vehicle vehicle) {
+        ownedVehicles.add(vehicle);
+    }
 }
